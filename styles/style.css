@@ -84,6 +84,23 @@ hr{
     color: #562EFF;
 }
 /* latest course  */
+#latest-course{
+    width: 870px;
+height: 362px;
+
+background: #FFFFFF;
+border-radius: 5px;
+}
+.courses{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 24px;
+}
+.course{
+    background-color: white;
+    box-shadow:5px 5px 5px 5px lightgray;
+    border-radius:5px;
+}
 .course .banner-thumbnail img{
     width: 224px;
     height: 104px;
@@ -121,9 +138,38 @@ hr{
 .time{
     color:#aeaeaeda;
 }
+
 .clock{
     color:red;
     background-color: lightcoral;
     border-radius:10px;
-    padding:5px 10px;
+    padding:2px 29px;
+}
+/* media queries  */
+/* mobile devices  */
+
+@media  only screen and (max-width:688px) {
+    .container{
+        width:100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .player, .blogs{
+        flex-direction: column;
+        
+   }
+}
+/* tablet mode  */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width:100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+.blogs{
+    grid-template-columns: repeat(1,1fr);
 }

@@ -9,13 +9,16 @@ body{
 /* section style part  */
 main{
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.players-blog{
+.container{
     background-color: #FFFFFF;
     width:870px;
     height:679px;
     padding: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
     
   
 }
@@ -34,6 +37,7 @@ main{
 }
 hr{
     border:1px solid #D1D1D1;
+    margin-bottom:27px;
 
 }
 .player{
@@ -52,6 +56,11 @@ hr{
 
 /* First article  */
 
+.blogs{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-row-gap:26px;
+}
 .blog{
     display:flex;
 }
